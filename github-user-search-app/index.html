@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" type="module" defer></script>
+  <script type="module">
+    import { Octokit, App } from "https://esm.sh/octokit";
+  </script>
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+  <main>
+    <section class="banner">
+      <h1 class="banner__title">devfinder</h1>
+      <div class="banner__theme" id="banner__theme">
+        <p class="banner__theme__mode">LIGHT</p>
+        <img class="banner__theme__img" src="./assets/icon-sun.svg" alt="sun icon">
+      </div>
+    </section>
+
+    <section class="search__bar">
+      <div class="search__bar__left">
+        <img class="search__bar__left__img" src="./assets/icon-search.svg" alt="">
+        <label for="search">
+          <input class="search__bar__left__search" type="search" name="search" id="search" placeholder="Search GitHub username...">
+        </label>
+      </div>
+      <div class="search__bar__right">
+        <p class="search__bar__right__error" id="search__bar__right__error"></p>
+        <button class="search__bar__right__submit" id="search__bar__right__submit">Search</button>
+      </div>
+    </section>
+
+    <section class="user__info" id="user__info">
+      <div class="user__info__left" id="user__info__left">
+        <img class="user__info__img" src="" alt="" id="user__info__img">
+      </div>
+      <div class="user__info__right">
+        <div class="user__info__right__flex-1">
+          <p class="user__info__right__name" id="user__info__right__name">No user name</p>
+          <p class="user__info__right__joined" id="user__info__right__joined">Not availible</p>
+        </div>
+        <div class="user__info__right__flex-2">
+          <p class="user__info__right__username" id="user__info__right__username">No user login</p>
+          <p class="user__info__right__bio" id="user__info__right__bio">This profile has no bio</p>
+        </div>
+        <div class="user__info__right__flex-3">
+          <div class="user__info__right__repos">
+            <p class="user__info__right__repos__name" id="user__info__right__repos__name">Repos</p>
+            <p class="user__info__right__repos__number" id="user__info__right__repos__number">Not availible</p>
+          </div>
+          <div class="user__info__right__followers">
+            <p class="user__info__right__followers__name" id="user__info__right__followers__name">Followers</p>
+            <p class="user__info__right__followers__number" id="user__info__right__followers__number">Not availible</p>
+          </div>
+          <div class="user__info__right__following">
+            <p class="user__info__right__following__name" id="user__info__right__following__name">Following</p>
+            <p class="user__info__right__following__number" id="user__info__right__following__number">Not availible</p>
+          </div>
+        </div>
+        <div class="user__info__right__flex-4">
+          <div class="user__info__right__location">
+            <img class="user__info__right__location__img" src="./assets/icon-location.svg" alt="">
+            <p class="user__info__right__location__name" id="user__info__right__location__name">Not availible</p>
+          </div>
+          <div class="user__info__right__twitter">
+            <img class="user__info__right__twitter__img" src="./assets/icon-twitter.svg" alt="">
+            <p class="user__info__right__twitter__name" id="user__info__right__twitter__name">Not Availible</p>
+          </div>
+        </div>
+        <div class="user__info__right__flex-5">
+          <div class="user__info__right__website">
+            <img class="user__info__right__website__img" src="./assets/icon-website.svg" alt="">
+            <p class="user__info__right__website__name" id="user__info__right__webiste__name">Not availible</p>
+          </div>
+          <div class="user__info__right__company">
+            <img class="user__info__right__company__img" src="./assets/icon-company.svg" alt="">
+            <p class="user__info__right__company__name" id="user__info__right__company__name">Not availible</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
